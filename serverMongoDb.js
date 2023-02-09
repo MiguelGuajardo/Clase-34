@@ -45,11 +45,11 @@ const sessionConfig ={
 }
 app.use(session(sessionConfig))
 
-app.use(session({
+/* app.use(session({
     secret: config.DATABASE.mongo.mongoSecret,
     resave: false,
     saveUninitialized:false
-}))
+})) */
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(cookieParser("secrett"))

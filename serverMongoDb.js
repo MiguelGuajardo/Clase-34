@@ -16,7 +16,7 @@ const logger = new Logger()
 const app = express()
 
 
-require("./src/database")
+/* require("./src/database") */
 require("./src/passport/local-auth")
 
 /* Config hbs */
@@ -26,6 +26,10 @@ app.set("view engine", ".hbs")
 /* middlewares */
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
+mongoose.set('strictQuery', true);
+mongoose.connect(config.DATABASE.mongo.mongoUrl, {useNewUrlParser: true})
+.then(db => logger.info("Base de Datos mongoDB conectada"))
+.catch(err => logger.error(err))
 const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 const sessionConfig ={
     store: MongoStore.create({

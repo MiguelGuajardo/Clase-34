@@ -90,3 +90,12 @@
 {"timestamp":"09/02/2023 10:08:41","level":"info","message":"Escuchando en el puerto 8080","data":null}
 {"timestamp":"09/02/2023 10:08:42","level":"info","message":"Base de Datos mongoDB conectada","data":null}
 {"timestamp":"09/02/2023 10:08:46","level":"error","message":"{\"Message\":\"Incorrect password\"}","data":null}
+{"timestamp":"09/02/2023 10:26:00","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 10:26:00","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"09/02/2023 10:26:10","level":"error","message":"{\"Message\":\"No User Found\"}","data":null}
+{"timestamp":"09/02/2023 10:26:19","level":"error","message":"{\"Message\":\"Incorrect password\"}","data":null}
+{"timestamp":"09/02/2023 11:05:57","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 11:05:58","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"09/02/2023 11:08:51","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 11:11:34","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 11:11:35","level":"info","message":"Base de Datos mongoDB conectada","data":null}

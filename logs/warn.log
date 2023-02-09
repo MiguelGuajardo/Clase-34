@@ -42,3 +42,5 @@
 {"timestamp":"09/02/2023 10:07:21","level":"error","message":{"Message":"Incorrect password"},"data":null}
 {"timestamp":"09/02/2023 10:07:59","level":"error","message":{"Message":"Incorrect password"},"data":null}
 {"timestamp":"09/02/2023 10:08:46","level":"error","message":"{\"Message\":\"Incorrect password\"}","data":null}
+{"timestamp":"09/02/2023 10:26:10","level":"error","message":"{\"Message\":\"No User Found\"}","data":null}
+{"timestamp":"09/02/2023 10:26:19","level":"error","message":"{\"Message\":\"Incorrect password\"}","data":null}

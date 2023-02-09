@@ -9,7 +9,6 @@ const MongoStore = require("connect-mongo")
 const { fork } = require("child_process")
 const compression = require("compression")
 const Logger = require("./src/utils/logger")
-const { default: mongoose } = require("mongoose")
 const logger = new Logger()
 
 
@@ -26,7 +25,7 @@ app.set("view engine", ".hbs")
 /* middlewares */
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true }
+const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true, useMongoClient: true  }
 const sessionConfig ={
     store: MongoStore.create({
         mongoUrl: config.DATABASE.mongo.mongoUrl,

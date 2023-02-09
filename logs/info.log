@@ -113,3 +113,5 @@
 {"timestamp":"09/02/2023 12:21:21","level":"info","message":"Base de Datos mongoDB conectada","data":null}
 {"timestamp":"09/02/2023 12:27:42","level":"info","message":"Escuchando en el puerto 8080","data":null}
 {"timestamp":"09/02/2023 12:27:43","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"09/02/2023 13:49:36","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 13:49:37","level":"info","message":"Base de Datos mongoDB conectada","data":null}

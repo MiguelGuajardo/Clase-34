@@ -25,7 +25,7 @@ app.set("view engine", ".hbs")
 /* middlewares */
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true, useMongoClient: true  }
+const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 const sessionConfig ={
     store: MongoStore.create({
         mongoUrl: config.DATABASE.mongo.mongoUrl,

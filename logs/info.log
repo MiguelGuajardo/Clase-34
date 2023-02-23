@@ -125,3 +125,27 @@
 {"timestamp":"09/02/2023 14:13:49","level":"info","message":"Base de Datos mongoDB conectada","data":null}
 {"timestamp":"09/02/2023 14:13:52","level":"info","message":"Escuchando en el puerto 8080","data":null}
 {"timestamp":"09/02/2023 14:13:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"09/02/2023 14:32:48","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"09/02/2023 14:32:49","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:23:18","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:23:19","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:23:30","level":"info","message":"Escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:23:31","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:51","level":"info","message":"CLUSTER corriendo en nodo primario 15676 - Puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Proceso #12116 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Proceso #7536 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Proceso #5008 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Proceso #7412 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Proceso #9388 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:52","level":"info","message":"Proceso #8552 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Proceso #11960 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Proceso #11048 escuchando en el puerto 8080","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}
+{"timestamp":"23/02/2023 12:24:53","level":"info","message":"Base de Datos mongoDB conectada","data":null}

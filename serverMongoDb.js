@@ -10,7 +10,8 @@ const { fork } = require("child_process")
 const compression = require("compression")
 const Logger = require("./src/utils/logger")
 const logger = new Logger()
-
+const cluster = require('cluster');
+const os = require('os')
 
 const app = express()
 
@@ -88,24 +89,17 @@ app.all("*",(req,res)=>{
 
 /* Server Listen */
 
-const server = app.listen(config.SERVER.PORT, () => {
-    logger.info(`Escuchando en el puerto ${config.SERVER.PORT}`)
-});
-server.on("error", (error) => logger.error(`Error en servidor ${error}`));
-
-/* const os = require('os')
-const cluster = require("cluster")
-
 if (config.SERVER.MODE === 'CLUSTER' && cluster.isPrimary) {        
     const numCPUs = os.cpus().length
+
     logger.info(`CLUSTER corriendo en nodo primario ${process.pid} - Puerto ${config.SERVER.PORT}`)
-    logger.info(`Número de procesadores: ${numCPUs}`)
+    
     for (let i = 0; i < numCPUs; i++) {
         cluster.fork()
     }
 
     cluster.on('exit', worker => {
-        logger.info(`Worker ${worker.process.pid} finalizado`)
+        logger.warn(`Worker ${worker.process.pid} finalizado`)
         cluster.fork()
     });
         
@@ -113,6 +107,5 @@ if (config.SERVER.MODE === 'CLUSTER' && cluster.isPrimary) {
     const server = app.listen(config.SERVER.PORT, () => {
         logger.info(`Proceso #${process.pid} escuchando en el puerto ${config.SERVER.PORT}`)
     });
-    server.on("error", (error) => logger.error(`Error en servidor ${error}`));
+    server.on("error", (error) => console.log(`Error en servidor ${error}`));
 }
- */

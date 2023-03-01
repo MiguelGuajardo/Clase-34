@@ -1,8 +1,5 @@
 const express = require("express")
 const router = express.Router()
-const multer  = require('multer')
-const configMemoryStorage = multer.memoryStorage()
-const upload = multer({ storage: configMemoryStorage})
 
 const auth = require("../controllers/authControllers")
 
@@ -19,21 +16,6 @@ router.post("/register", auth.registerPassport)
 router.get("/register-error", auth.register_error)
 
 router.get('/logout', auth.logOut)
-
-router.get("/",isAuthenticated, auth.authenticateHome )
-
-router.post("/", auth.productPost)
-
-router.get("/profile", isAuthenticated , auth.profile)
-
-router.post("/profile", upload.single('avatar'), auth.profileThumbnail)
-
-function isAuthenticated (req,res,next){
-    if(req.isAuthenticated()){
-        return next()
-    }
-    res.redirect("/login")
-}
 
 
 module.exports = router

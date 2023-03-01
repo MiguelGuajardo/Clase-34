@@ -5,14 +5,16 @@ const {config} = require("./src/config/index")
 const cookieParser = require("cookie-parser")
 const passport = require("passport")
 const auth  = require("./src/routes/authRouter")
+const profile = require("./src/routes/profileRouter")
+const home = require("./src/routes/productsRouter")
+const info = require("./src/routes/infoRouter")
+const random = require("./src/routes/randomRouter")
+const Error404 = require("./src/routes/404Router")
 const MongoStore = require("connect-mongo")
-const { fork } = require("child_process")
-const compression = require("compression")
 const Logger = require("./src/utils/logger")
 const logger = new Logger()
 const cluster = require('cluster');
 const os = require('os')
-
 const app = express()
 
 
@@ -59,33 +61,11 @@ app.use(express.static('./public'))
 
 /* Routes */
 app.use("/", auth)
-
-app.get("/info", (req,res)=>{
-    const data = INFO
-    logger.info(JSON.stringify(data))
-    res.render("info", {data})
-})
-app.get("/infozip",compression(), (req,res)=>{
-    const data = INFO
-    res.render("info", {data})
-})
-
-app.get("/randoms",(req,res)=>{
-    const cant = req.query.cant || 10000
-    const subProcess = fork("randomNumbers.js")
-    const PORT = parseInt(process.argv[2]) || 8080
-    const PROCESSID = process.pid
-    subProcess.send(cant)
-    logger.info(`port: ${PORT} -> Fyh: ${Date.now()}`)
-    subProcess.on("message",(cant)=>{
-        res.render("randoms", { data: cant , PORT, PROCESSID})
-    })
-})
-app.all("*",(req,res)=>{
-    const {method, url} = req
-    logger.warn(`Ruta ${method} ${url} no implementada`)
-    res.render("404")
-})
+app.use("/", home)
+app.use("/profile", profile)
+app.use("/", info)
+app.use("/randoms", random)
+app.all("*",Error404)
 
 /* Server Listen */
 

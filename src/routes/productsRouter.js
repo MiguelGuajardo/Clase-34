@@ -1,10 +1,10 @@
 const express = require("express")
-const { authenticateHome, productPost } = require("../controllers/productsControllers")
 const router = express.Router()
+const productsController = require("../controllers/productsControllers")
 
-router.get("/",isAuthenticated, authenticateHome )
+router.get("/",isAuthenticated, productsController.getProducts )
 
-router.post("/", productPost)
+router.post("/", productsController.saveProduct)
 
 function isAuthenticated (req,res,next){
     if(req.isAuthenticated()){
@@ -13,5 +13,4 @@ function isAuthenticated (req,res,next){
     res.redirect("/login")
 }
 
-
-module.exports = router
+module.exports = router 

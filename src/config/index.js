@@ -28,7 +28,11 @@ const config = {
     },
     LOGGER:{
         WINSTON: process.env.NODE_ENV
+    },
+    APP:{
+        persistence: process.env.PERSISTENCE
     }
 }
+
 
 module.exports = {config}

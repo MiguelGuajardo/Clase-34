@@ -1,14 +1,15 @@
-const { saveProduct, findProducts } = require("../services/productsService")
+const { ProductsService } = require("../services/productsService")
+const productService = new ProductsService()
 
-const authenticateHome = async(req,res,next)=>{
+const getProducts = async(req,res)=>{
     let datos = req.user
-    let datosProducts = await findProducts()
     const {alias} = datos
-
+    let datosProducts = await productService.getProducts()
     res.render("index",{alias,datosProducts})
 }
-const productPost = async(req,res,next)=>{
-    await saveProduct(req.body)
+const saveProduct = async(req,res)=>{
+    let product = req.body
+    let result = await productService.addProduct(product)
     res.redirect("/")
 }
-module.exports = {authenticateHome,productPost}
+module.exports = {getProducts,saveProduct}

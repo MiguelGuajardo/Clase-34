@@ -5,6 +5,14 @@ class ProductDaoMongo {
         const datos = await Product.find({}).lean()
         return datos
     }
+    getOne = async(id)=>{
+        try {
+            const product = await Product.findById(id)
+            return product
+        } catch (error) {
+            console.log(error)
+        }
+    }
     save = async(product)=>{
         try {
             const newProduct = new Product()
@@ -12,6 +20,13 @@ class ProductDaoMongo {
             newProduct.price = product.price
             newProduct.thumbnail = product.thumbnail
             return await newProduct.save()
+        } catch (error) {
+            logger.error("Error",error)
+        }
+    }
+    delete = async(id)=>{
+        try {
+            return Product.findByIdAndDelete(id)
         } catch (error) {
             logger.error("Error",error)
         }

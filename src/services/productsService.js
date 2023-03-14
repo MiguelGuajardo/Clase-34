@@ -12,8 +12,14 @@ class ProductsService {
     getProducts = async ()=>{
         return await this.productsDao.getAll()
     }
+    getOneProduct = async (id)=>{
+        return await this.productsDao.getOne(id)
+    }
     addProduct = async (product)=>{
         return await this.productsDao.save(product)
+    }
+    deleteProduct = async(id)=>{
+        return await this.productsDao.delete(id)
     }
 
 }

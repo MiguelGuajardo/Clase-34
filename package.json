@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "mongo": "nodemon serverMongoDb.js",
-    "start": "node serverMongoDb.js"
+    "start": "node serverMongoDb.js",
+    "testMemory": "mocha src/test/daoMemory.test.js",
+    "testMongo": "mocha src/test/daoMongo.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "assert": "^2.0.0",
     "bcrypt-nodejs": "^0.0.3",
+    "chai": "^4.3.7",
     "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
@@ -20,6 +24,7 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "minimist": "^1.2.7",
+    "mocha": "^10.2.0",
     "moment": "^2.29.4",
     "mongoose": "^6.8.3",
     "multer": "^1.4.5-lts.1",
@@ -27,6 +32,7 @@
     "passport-local": "^1.0.0",
     "sharp": "^0.31.3",
     "socket.io": "^4.5.4",
+    "supertest": "^6.3.3",
     "winston": "^3.8.2"
   }
 }
